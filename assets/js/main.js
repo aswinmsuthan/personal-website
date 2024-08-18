@@ -7,6 +7,20 @@
 !(function ($) {
   "use strict";
 
+    // Hero typed
+    // if ($('.typed').length) {
+    //   var typed_strings = $(".typed").data('typed-items');
+    //   console.log(typed_strings)
+    //   typed_strings = typed_strings.split(',')
+    //   new Typed('.typed', {
+    //     strings: typed_strings,
+    //     loop: true,
+    //     typeSpeed: 100,
+    //     backSpeed: 50,
+    //     backDelay: 2000
+    //   });
+    // }
+
   // Nav Menu
   $(document).on('click', '.nav-menu a, .mobile-nav a', function (e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -220,5 +234,34 @@
     $('#para').text(para);
 
   })
+
+//   $(document).ready(function() {
+//     const roles = ["Software Engineer", "Web Designer", "Developer"];
+//     let index = 0, charIndex = 0, isDeleting = false;
+
+//     function typeEffect() {
+//         const currentRole = roles[index];
+//         const displayedText = isDeleting 
+//             ? currentRole.substring(0, charIndex--) 
+//             : currentRole.substring(0, charIndex++);
+
+//         $('#role').text(displayedText);
+
+//         if (!isDeleting && charIndex === currentRole.length) {
+//             isDeleting = true;
+//             setTimeout(typeEffect, 1000);
+//         } else if (isDeleting && charIndex < 0) {
+//             isDeleting = false;
+//             index = (index + 1) % roles.length;
+//             setTimeout(typeEffect, 500);
+//         } else {
+//             setTimeout(typeEffect, isDeleting ? 100 : 150);
+//         }
+//     }
+
+//     typeEffect();
+// });
+
+
 
 })(jQuery);
