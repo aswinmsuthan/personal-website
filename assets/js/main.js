@@ -11,8 +11,7 @@
     // if ($('.typed').length) {
     //   var typed_strings = $(".typed").data('typed-items');
     //   console.log(typed_strings)
-    //   typed_strings = typed_strings.split(',')
-    //   new Typed('.typed', {
+    //   typed_strings = new Typed('.typed', {
     //     strings: typed_strings,
     //     loop: true,
     //     typeSpeed: 100,
@@ -222,10 +221,6 @@
     var url = sessionStorage.getItem('url');
     var para = sessionStorage.getItem('para');
     var image = sessionStorage.getItem('image');
-
-    // console.log(image)
-    // console.log(pic)
-    // console.log(photo)
     // Populate the details page with the retrieved data
     $('#image').attr('src', image)
     $('#category').text(category);
@@ -233,6 +228,13 @@
     $('#url').attr('href', url).text(url);
     $('#para').text(para);
 
+  })
+  $(document).ready(function (){
+    $('.linkedin').attr('href', 'https://www.linkedin.com/in/aswin-m-suthan/')
+    $('.github').attr('href', 'https://github.com/aswinmsuthan')
+    $('.reddit').attr('href', 'https://www.reddit.com/u/Techozine/')
+    $('.twitter').attr('href', 'https://x.com/im_aswin_')
+    $('.instagram').attr('href', 'https://www.instagram.com/im_aswin.m')
   })
 
 //   $(document).ready(function() {
