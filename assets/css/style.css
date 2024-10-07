@@ -817,7 +817,7 @@ section .container {
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.774);
   position: absolute;
   left: 30px;
   right: 30px;
@@ -852,8 +852,8 @@ section .container {
   position: absolute;
   top: 35px;
   left: 35px;
-  border-top: 3px solid #fff;
-  border-left: 3px solid #fff;
+  border-top: 3px solid #008bff;
+  border-left: 3px solid #008bff;
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
@@ -866,8 +866,8 @@ section .container {
   position: absolute;
   bottom: 35px;
   right: 35px;
-  border-bottom: 3px solid #fff;
-  border-right: 3px solid #fff;
+  border-bottom: 3px solid #008bff;
+  border-right: 3px solid #008bff;
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }

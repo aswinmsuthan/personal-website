@@ -169,17 +169,12 @@
   // Initiate venobox (lightbox feature used in portofilo)
   $(document).ready(function () {
     $('.venobox').venobox({
-      'share': false
+      'share': false,
+      'navigation': false // Disable next and previous buttons
     });
   });
 
-  // Portfolio details carousel
-  $(".portfolio-details-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
-  });
+
 
   //portfolio dynamic link for details
   $(document).ready(function () {
@@ -208,7 +203,7 @@
       sessionStorage.setItem('client', client);
       sessionStorage.setItem('url', url);
       sessionStorage.setItem('para', para);
-      sessionStorage.setItem('image', image);
+      sessionStorage.setItem('image', JSON.stringify(image));
 
 
 
@@ -220,13 +215,28 @@
     var client = sessionStorage.getItem('client');
     var url = sessionStorage.getItem('url');
     var para = sessionStorage.getItem('para');
-    var image = sessionStorage.getItem('image');
+    // var image = sessionStorage.getItem('image');
+    var image = JSON.parse(sessionStorage.getItem('image'));
     // Populate the details page with the retrieved data
-    $('#image').attr('src', image)
+    // $('#image').attr('src', image)
     $('#category').text(category);
     $('#client').text(client);
     $('#url').attr('href', url).text(url);
     $('#para').text(para);
+    //looping images
+    if (image) {
+      image.forEach(function (image) {
+          $('.portfolio-details-carousel').append('<img class="img-fluid" src="' + image + '" alt="">');
+      });
+  }
+    // Portfolio details carousel
+    $(".portfolio-details-carousel").owlCarousel({
+      autoplay: true,
+      dots: true,
+      loop: true,
+      items: 1, // Show one item at a time
+      autoplayTimeout: 2000 // Duration for each image in milliseconds (e.g., 3000ms = 3 seconds)
+    });
 
   })
   $(document).ready(function (){
