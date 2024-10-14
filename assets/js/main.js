@@ -1,9 +1,3 @@
-/**
-* Template Name: Personal - v2.5.1
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 !(function ($) {
   "use strict";
 
@@ -21,6 +15,7 @@
     // }
 
   // Nav Menu
+
   $(document).on('click', '.nav-menu a, .mobile-nav a', function (e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var hash = this.hash;
@@ -247,33 +242,65 @@
     $('.instagram').attr('href', 'https://www.instagram.com/im_aswin.m')
   })
 
-//   $(document).ready(function() {
-//     const roles = ["Software Engineer", "Web Designer", "Developer"];
-//     let index = 0, charIndex = 0, isDeleting = false;
+  $(document).ready(function () {
+    var roles = ["Software Engineer", "Web Developer", "Web Designer"];
+    var index = 0; // Current role index
+    var charIndex = 0; // Current character index
+    var isDeleting = false; // Flag to check if we are deleting
 
-//     function typeEffect() {
-//         const currentRole = roles[index];
-//         const displayedText = isDeleting 
-//             ? currentRole.substring(0, charIndex--) 
-//             : currentRole.substring(0, charIndex++);
+    function typeEffect() {
+        var currentRole = roles[index];
+        var displayedText = isDeleting 
+            ? currentRole.substring(0, charIndex--) 
+            : currentRole.substring(0, charIndex++);
 
-//         $('#role').text(displayedText);
+        $('#typed-text').text(displayedText);
 
-//         if (!isDeleting && charIndex === currentRole.length) {
-//             isDeleting = true;
-//             setTimeout(typeEffect, 1000);
-//         } else if (isDeleting && charIndex < 0) {
-//             isDeleting = false;
-//             index = (index + 1) % roles.length;
-//             setTimeout(typeEffect, 500);
-//         } else {
-//             setTimeout(typeEffect, isDeleting ? 100 : 150);
-//         }
-//     }
+        // Typing speed
+        var typingSpeed = isDeleting ? 50 : 100;
 
-//     typeEffect();
+        // Check if we need to switch roles
+        if (!isDeleting && charIndex === currentRole.length+1) {
+            isDeleting = true; // Start deleting
+            typingSpeed = 1500; // Pause before deleting
+        } else if (isDeleting && charIndex < 0) {
+            isDeleting = false; // Start typing next role
+            index = (index + 1) % roles.length; // Move to the next role
+            typingSpeed = 500; // Pause before typing next role
+        }
+
+        setTimeout(typeEffect, typingSpeed);
+    }
+
+    // Start the typing effect
+    typeEffect();
+});
+//===============================================================
+// $(document).ready(function () {
+//   var phrases = ["Software Engineer", "Web Developer"];
+//   var currentPhraseIndex = 0;
+//   var currentCharIndex = 0;
+//   var typingSpeed = 100; // Speed of typing in milliseconds
+//   var pauseDuration = 2000; // Pause duration after each phrase
+
+//   function typePhrase() {
+//       var currentPhrase = phrases[currentPhraseIndex];
+//       if (currentCharIndex < currentPhrase.length) {
+//           $('#typed-text').text(currentPhrase.substring(0, currentCharIndex + 1));
+//           currentCharIndex++;
+//           setTimeout(typePhrase, typingSpeed);
+//       } else {
+//           setTimeout(function () {
+//               currentCharIndex = 0;
+//               currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length; // Loop through phrases
+//               typePhrase();
+//           }, pauseDuration);
+//       }
+//   }
+
+//   // Start typing effect
+//   typePhrase();
 // });
-
 
 
 })(jQuery);

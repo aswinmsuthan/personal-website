@@ -91,6 +91,18 @@ h6 {
   border-bottom: 2px solid #008bff;
   padding-bottom: 6px;
 }
+.cursor {
+  display: inline-block; /* Make it inline */
+  width: 10px; /* Width of the cursor */
+  /* color: #fff; */
+  background-color: black; /* Cursor color */
+  animation: blink 0.7s step-end infinite; /* Blinking effect */
+}
+@keyframes blink {
+  50% {
+      border-color: transparent; /* Cursor disappears */
+  }
+}
 
 #header img {
   padding: 0;
