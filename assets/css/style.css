@@ -402,7 +402,7 @@ section .container {
   }
   .section-title p{
     font-size: 30px;
-    margin: -15px 0px 0px;
+    margin: -15px 0px -3px 0px;
     
   }
 
