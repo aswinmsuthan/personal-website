@@ -363,23 +363,8 @@ section .container {
   padding: 30px;
 }
 
-@media (max-width: 768px) {
-  section {
-    top: 120px;
-  }
-  .section-title p{
-    font-size: 30px;
-  }
 
-  section.section-show {
-    top: 80px;
-  }
-}
-/* @media (max-width: 992px){
-  .section-title p{
-    font-size: 30px;
-  }
-} */
+
 
 .section-title h2 {
   font-size: 14px;
@@ -410,6 +395,18 @@ section .container {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #fff;
+}
+@media (max-width: 768px) {
+  section {
+    top: 120px;
+  }
+  .section-title p{
+    font-size: 29px;
+  }
+
+  section.section-show {
+    top: 80px;
+  }
 }
 
 /*--------------------------------------------------------------
