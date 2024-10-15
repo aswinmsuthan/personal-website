@@ -237,7 +237,7 @@
   $(document).ready(function (){
     $('.linkedin').attr('href', 'https://www.linkedin.com/in/aswin-m-suthan/')
     $('.github').attr('href', 'https://github.com/aswinmsuthan')
-    $('.gmail').attr('href','mailtoaswin.dev@gmail.com')
+    $('.gmail').attr('href','mailto:mailtoaswin.dev@gmail.com')
     $('.twitter').attr('href', 'https://x.com/im_aswin_')
     $('.instagram').attr('href', 'https://www.instagram.com/im_aswin.m')
     $('.discord').attr('href', 'https://discord.com/channels/@me/1136978819723571220')
