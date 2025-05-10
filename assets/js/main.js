@@ -244,7 +244,7 @@
   })
 
   $(document).ready(function () {
-    var roles = ["Software Engineer", "Web Developer", "Web Designer"];
+    var roles = ["Software Engineer",  "DevOps Enthusiast", "Web Developer"];
     var index = 0; // Current role index
     var charIndex = 0; // Current character index
     var isDeleting = false; // Flag to check if we are deleting
